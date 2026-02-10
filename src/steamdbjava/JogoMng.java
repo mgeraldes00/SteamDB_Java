@@ -7,6 +7,7 @@ public class JogoMng {
     private List<Jogo> jogos = new ArrayList<>();
 
     public void carregarDeCSV(String caminho) {
+        System.out.println("A tentar ler: " + new java.io.File(caminho).getAbsolutePath());
         try (BufferedReader br = new BufferedReader(new FileReader(caminho))) {
             String linha = br.readLine(); // cabeçalho
             while ((linha = br.readLine()) != null) {
